@@ -1,17 +1,16 @@
-# jjy_sync_with_ntp
+# clock_sync_with_ntp
 
-A new Flutter project.
+NTP 서버 동기화가 탑재된 JJY 에뮬레이터
 
-## Getting Started
+## 사용법
 
-This project is a starting point for a Flutter application.
+1. RTC 서버 설정
+   - 시간을 동기화할 RTC 서버를 설정합니다.
+2. 주파수 설정
+   - 사용할 규격 및 주파수를 선택합니다.
+3. 에뮬레이터 시작 및 동기화
+   - 시계를 수신 모드로 놓고 에뮬레이터를 실행합니다. 볼륨을 크게 설정할 수록 성공 확률이 올라가지만 귀에 안 좋은 영향을 끼칠 수 있으므로 주의가 필요합니다.
 
-A few resources to get you started if this is your first Flutter project:
+===
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+이 프로젝트의 대부분은 Gemini 3 flash를 통해 만들어졌습니다.
