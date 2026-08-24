@@ -23,6 +23,7 @@ class _EmulatorScreenState extends State<EmulatorScreen> {
   bool _isSyncingNetwork = false;
   String _syncStatusText = "NTP 서버를 선택하고 동기화하세요.";
   bool _isTransmitting = false;
+  String _selectedType = "JJY";
   int _selectedFrequency = 60; 
   int _currentSecond = 0;
   String _currentPulseType = "-";
@@ -117,6 +118,8 @@ class _EmulatorScreenState extends State<EmulatorScreen> {
             Text(_digitalClockDisplay, textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 44, fontWeight: FontWeight.bold, fontFamily: 'Courier', letterSpacing: 2)),
             const SizedBox(height: 16),
+            _buildServerSelector(),
+            const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -131,11 +134,10 @@ class _EmulatorScreenState extends State<EmulatorScreen> {
             const SizedBox(height: 24),
             _buildFrameMatrix(),
             const SizedBox(height: 24),
-            _buildServerSelector(),
-            const SizedBox(height: 24),
             _buildFrequencySelector(),
             const SizedBox(height: 24),
             _buildActionButtons(),
+            //const SizedBox(height: 64),
           ],
         ),
       ),
@@ -201,9 +203,9 @@ class _EmulatorScreenState extends State<EmulatorScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ChoiceChip(label: const Text('40 kHz'), selected: _selectedFrequency == 40, onSelected: _isTransmitting ? null : (s) => setState(() => _selectedFrequency = 40)),
+            ChoiceChip(label: const Text('JJY 40 kHz'), selected: _selectedFrequency == 40, onSelected: _isTransmitting ? null : (s) => setState(() => _selectedFrequency = 40)),
             const SizedBox(width: 16),
-            ChoiceChip(label: const Text('60 kHz'), selected: _selectedFrequency == 60, onSelected: _isTransmitting ? null : (s) => setState(() => _selectedFrequency = 60)),
+            ChoiceChip(label: const Text('JJY 60 kHz'), selected: _selectedFrequency == 60, onSelected: _isTransmitting ? null : (s) => setState(() => _selectedFrequency = 60)),
           ],
         ),
       ],
